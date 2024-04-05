@@ -4,6 +4,10 @@ import { Header } from './Header'
 export const Login = () => {
 const [isSignInForm,setIsSignInForm] = useState(true);
 
+const handleButtonClick =()=>{
+    //Falidate the form data
+    
+}
 const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
 }
@@ -29,7 +33,7 @@ const toggleSignInForm = () => {
          placeholder='password'  
          className='p-4 my-4 w-full bg-gray-700 rounded-lg'/>
         <button 
-        className='p-4 my-4 bg-red-700 w-full rounded-lg'
+        className='p-4 my-4 bg-red-700 w-full rounded-lg' onClick ={handleButtonClick}  
         >{isSignInForm ? "Sign In" :"Sign UP"}</button>
         <p className='text-gray-400 bg-transparent cursor-pointer'onClick={ toggleSignInForm }>{!isSignInForm ? "Already a user Sign In now ?" :" New to Netflix? Sign up now."}</p>
 
