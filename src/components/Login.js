@@ -31,7 +31,7 @@ const toggleSignInForm = () => {
         <button 
         className='p-4 my-4 bg-red-700 w-full rounded-lg'
         >{isSignInForm ? "Sign In" :"Sign UP"}</button>
-        <p className='text-gray-400 bg-transparent cursor-pointer'onClick={ toggleSignInForm }>{!isSignInForm ? "Already a user Sign In now ?" :" New to here Please Sign Up"}</p>
+        <p className='text-gray-400 bg-transparent cursor-pointer'onClick={ toggleSignInForm }>{!isSignInForm ? "Already a user Sign In now ?" :" New to Netflix? Sign up now."}</p>
 
    </form>
 
