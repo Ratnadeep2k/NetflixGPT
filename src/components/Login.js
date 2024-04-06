@@ -3,7 +3,9 @@ import { Header } from './Header'
 import checkValidData from "../utils/validate"
 export const Login = () => {
 const [isSignInForm,setIsSignInForm] = useState(true);
+const [errorMessage,setErrorMessage]=useState(null);
 
+// const name =useRef(null);
 const email = useRef(null);
 const password = useRef(null);
 
@@ -12,7 +14,8 @@ const handleButtonClick =()=>{
     // checkValidData
     // console.log(email.current.value);
     // console.log(password.current.value);
-   const msg = checkValidData(email.current.value);
+   const msg = checkValidData(email.current.value,password.current.value); 
+   setErrorMessage(msg);
    console.log(msg);
 }
 const toggleSignInForm = () => {
@@ -28,7 +31,10 @@ const toggleSignInForm = () => {
    <form onSubmit={(e)=>{e.preventDefault()}}
         className='w-3/12 p-12 bg-black my-36 absolute mx-auto right-0 left-0 text-white bg-opacity-80'>
         <h1 className='font-bold text-3xl py-4'>{isSignInForm ? "Sign In" :"Sign Up"}</h1>
-        { !isSignInForm && ( <input type ="Name" 
+        { !isSignInForm && (
+        <input 
+        // ref={name}
+        type ="Name" 
          placeholder='Full Name'  
          className='p-4 my-4 w-full bg-gray-700 rounded-lg'/>
        )
@@ -43,6 +49,9 @@ const toggleSignInForm = () => {
         type ="password" 
          placeholder='password'  
          className='p-4 my-4 w-full bg-gray-700 rounded-lg'/>
+         <p className='text-red-500 '>
+          {errorMessage} 
+         </p>
         <button 
         className='p-4 my-4 bg-red-700 w-full rounded-lg' onClick ={handleButtonClick}  
         >{isSignInForm ? "Sign In" :"Sign UP"}</button>
