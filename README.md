@@ -8,6 +8,9 @@
 - Sign Up form 
 - form validation
 - useRef Hook
+- firebase connection
+- firebase Authentication
+- Create SignUp user Account 
 
 # Features :
 - Authentication
@@ -19,7 +22,7 @@
         - Trailer in Backround 
         - Title and Description
         - Movie Suggestions
-            -MoviesList
+            - MoviesList
 - NetflixGPT 
     - Search Bar 
     _ Movie Suggestions
