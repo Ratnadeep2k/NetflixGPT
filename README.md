@@ -11,6 +11,9 @@
 - firebase connection
 - firebase Authentication
 - Create SignUp user Account 
+- Implement Signin user API
+- created our Redux store with userSlice
+- 
 
 # Features :
 - Authentication
