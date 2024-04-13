@@ -26,7 +26,6 @@ export const Login = () => {
     if (msg) return;
     //signup signin logic
     if (!isSignInForm) {
-
       //Signup
       createUserWithEmailAndPassword(
         auth,
