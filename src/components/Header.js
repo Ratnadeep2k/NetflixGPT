@@ -12,7 +12,6 @@ export const Header = () => {
   const handleSignOut = () => {
     signOut(auth).then(() => {
       // window.location.href = '/login';
-      navigate("/")
       // Sign-out successful.
     }).catch((error) => {
       // An error happened.
