@@ -13,7 +13,9 @@
 - Create SignUp user Account 
 - Implement Signin user API
 - created our Redux store with userSlice
-- 
+- Update Profile
+- BugFix : SignUp user DisplayName and Profile picture Update
+- BugFix : If the user is logged in Redirect it to the browse Page
 
 # Features :
 - Authentication
