@@ -6,6 +6,7 @@ import checkValidData from "../utils/validate"
 import { useNavigate } from 'react-router-dom';
 import { addUser } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
+import { USER_AVATAR } from '../utils/constants';
 export const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -35,14 +36,17 @@ export const Login = () => {
         .then((userCredential) => {
           const user = userCredential.user;
           updateProfile(user, {
-            displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
+            displayName: name.current.value, photoURL: USER_AVATAR
           }).then(() => {
             // Profile updated!
-            const {uid:uid,email:email,displayName:displayName,photoURL} = auth;
+            const {uid,email,displayName,photoURL} = auth.currentUser;
             dispatch(
               addUser
               (
-              {uid:uid,email:email,displayName:displayName,photoURL
+              {uid:uid,
+                email:email,
+                displayName:displayName,
+                photoURL
               })
             );
             navigate("/browse")
