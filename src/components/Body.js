@@ -12,7 +12,7 @@ export const Body = () => {
 
         },
         {
-            path:"/browse",
+            path:"/browse",  
             element: <Browse/>
         }
 

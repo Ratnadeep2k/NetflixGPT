@@ -39,14 +39,11 @@ export const Login = () => {
             displayName: name.current.value, photoURL: USER_AVATAR
           }).then(() => {
             // Profile updated!
-            const {uid,email,displayName,photoURL} = auth.currentUser;
+            const {uid:uid,email:email,displayName:displayName,photoURL} = auth;
             dispatch(
               addUser
               (
-              {uid:uid,
-                email:email,
-                displayName:displayName,
-                photoURL
+              {uid:uid,email:email,displayName:displayName,photoURL
               })
             );
             navigate("/browse")
