@@ -16,6 +16,7 @@
 - Update Profile
 - BugFix : SignUp user DisplayName and Profile picture Update
 - BugFix : If the user is logged in Redirect it to the browse Page
+- unsubscribed to the onauthstatechange callback 
 
 # Features :
 - Authentication
