@@ -17,6 +17,7 @@
 - BugFix : SignUp user DisplayName and Profile picture Update
 - BugFix : If the user is logged in Redirect it to the browse Page
 - unsubscribed to the onauthstatechange callback 
+- Add HardCoded value in Constants
 
 # Features :
 - Authentication
