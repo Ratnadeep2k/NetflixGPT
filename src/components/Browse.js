@@ -1,18 +1,21 @@
 import React, { useEffect } from 'react'
 import { Header } from './Header'
-import { API_OPTIONS } from '../utils/constants';
+import useNowPlayingMovies  from '../hooks/useNowPlayingMovies'
 export const Browse = () => {
-  const getNowPlayingMovies= async()=>{
-    const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?page=1', API_OPTIONS)
-     const json = await data.json();
-     console.log(json);
-  };
-  useEffect(()=>{
-    getNowPlayingMovies();
-  },[])
+  //fetch data from TMDB Api and update store
+  useNowPlayingMovies();
+
   return (
-    <>
+    <> 
         <Header/>
+        {/*
+          MainContainer 
+             --videoBackground
+             --video Title
+          SecondaryConatiner
+            --MovieList *n
+              -cards*n
+        */}
     </>
   )
 }

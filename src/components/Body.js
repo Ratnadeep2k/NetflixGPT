@@ -14,7 +14,7 @@ export const Body = () => {
             path:"/browse",  
             element: <Browse/>
         }
-
+ 
     ]);
 
     // useEffect(() => {

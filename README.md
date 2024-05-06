@@ -18,6 +18,8 @@
 - BugFix : If the user is logged in Redirect it to the browse Page
 - unsubscribed to the onauthstatechange callback 
 - Add HardCoded value in Constants
+- Register TMDB API & Create an app & get Access Token 
+- Get Data from TMDB Api 
 
 # Features :
 - Authentication
