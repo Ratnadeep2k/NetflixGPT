@@ -13,7 +13,7 @@ function MainContainer() {
     //need some movie title trailer
     <>
         
-        <div>
+        <div className=''>
             <VideoTitle title ={original_title} overview={overview}/>
             <VideoBackground movieId ={id} />
         </div>
