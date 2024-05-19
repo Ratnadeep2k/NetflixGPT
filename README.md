@@ -34,4 +34,5 @@
             - MoviesList
 - NetflixGPT 
     - Search Bar 
-    _ Movie Suggestions
+    - Movie Suggestions
+    - Movie Delete 
