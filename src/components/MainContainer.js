@@ -8,14 +8,14 @@ function MainContainer() {
     if(!movies) return ;
     const mainMovie =movies[0];
     console.log(mainMovie);
-    const {original_title,overview,movieId} = mainMovie;
+    const {original_title,overview,id} = mainMovie;
   return (
     //need some movie title trailer
     <>
         
         <div>
             <VideoTitle title ={original_title} overview={overview}/>
-            <VideoBackground movieId ={movieId}/>
+            <VideoBackground movieId ={id} />
         </div>
     
     </>
