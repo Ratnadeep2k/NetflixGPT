@@ -6,7 +6,7 @@ import checkValidData from "../utils/validate"
 import { useNavigate } from 'react-router-dom';
 import { addUser } from '../utils/userSlice';
 import { useDispatch } from 'react-redux';
-import { USER_AVATAR } from '../utils/constants';
+import { USER_AVATAR,BG_IMG } from '../utils/constants';
 export const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -89,7 +89,7 @@ export const Login = () => {
     <>
       <Header />
       <div className="absolute">
-        <img src='https://assets.nflxext.com/ffe/siteui/vlv3/7ca5b7c7-20aa-42a8-a278-f801b0d65fa1/fb548c0a-8582-43c5-9fba-cd98bf27452f/IN-en-20240326-popsignuptwoweeks-perspective_alpha_website_medium.jpg'
+        <img src={BG_IMG}
           alt='background' />
       </div>
       <form onSubmit={(e) => { e.preventDefault() }}
