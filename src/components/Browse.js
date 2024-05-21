@@ -8,6 +8,7 @@ import useTrendingMovies from '../hooks/useTrendingMovies';
 import useUpComingingMovies from '../hooks/useUpComingMovies';
 import useSeries from '../hooks/useSeries';
 import GptSearch from './GptSearch';
+import { useSelector } from 'react-redux';
 export const Browse = () => {
   //fetch data from TMDB Api and update store
   useNowPlayingMovies();
@@ -15,14 +16,20 @@ export const Browse = () => {
   useTrendingMovies();
   useUpComingingMovies();
   useSeries();
+  const showGptSearch =useSelector(store=> store.gpt.showGptSearch);
 
   return (
     <> 
         <Header/>
-        <GptSearch/>
-        <MainContainer/>
+        {
+          showGptSearch ? <GptSearch/> :
+          <>
+           <MainContainer/>
+            <SecondaryConatiner/>
+          </>
+        }
 
-        <SecondaryConatiner/>
+        
         {/*
           MainContainer 
              --videoBackground
