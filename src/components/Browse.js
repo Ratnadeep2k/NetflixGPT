@@ -7,6 +7,7 @@ import usePopularMovies from '../hooks/usePopular';
 import useTrendingMovies from '../hooks/useTrendingMovies';
 import useUpComingingMovies from '../hooks/useUpComingMovies';
 import useSeries from '../hooks/useSeries';
+import GptSearch from './GptSearch';
 export const Browse = () => {
   //fetch data from TMDB Api and update store
   useNowPlayingMovies();
@@ -18,7 +19,9 @@ export const Browse = () => {
   return (
     <> 
         <Header/>
+        <GptSearch/>
         <MainContainer/>
+
         <SecondaryConatiner/>
         {/*
           MainContainer 
