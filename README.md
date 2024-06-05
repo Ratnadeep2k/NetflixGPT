@@ -43,3 +43,4 @@
 - NetflixGPT 
     - Search Bar 
     - Movie Suggestions
+    - Change Language 
